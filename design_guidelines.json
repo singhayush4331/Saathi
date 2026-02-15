@@ -1,0 +1,165 @@
+{
+  "brand_identity": {
+    "name": "Saathi",
+    "mission": "Confidential Relationship Support Platform",
+    "tone": "Calm, Emotionally Safe, Trustworthy, Non-judgmental",
+    "target_audience": "Indians 18+ facing relationship issues",
+    "archetype": "Organic & Earthy (Trust, Growth, Calm)"
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Nunito, sans-serif",
+      "body": "Inter, sans-serif",
+      "accent": "Caveat, cursive"
+    },
+    "weights": {
+      "headings": "font-bold",
+      "body": "font-normal",
+      "accent": "font-medium"
+    },
+    "sizes": {
+      "h1": "text-4xl md:text-5xl lg:text-6xl tracking-tight",
+      "h2": "text-3xl md:text-4xl tracking-tight",
+      "h3": "text-2xl md:text-3xl font-semibold",
+      "body": "text-base md:text-lg leading-relaxed",
+      "small": "text-sm text-muted-foreground"
+    },
+    "installation": "Import fonts in index.css: @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Inter:wght@400;500;600&family=Caveat:wght@400;700&display=swap');"
+  },
+  "colors": {
+    "palette": {
+      "primary": {
+        "name": "Saathi Sage",
+        "hex": "#4A8B71",
+        "tailwind": "bg-[#4A8B71] text-white hover:bg-[#3D745E]"
+      },
+      "secondary": {
+        "name": "Calm Sky",
+        "hex": "#E0F2F1",
+        "tailwind": "bg-[#E0F2F1] text-[#2C5F4C]"
+      },
+      "accent": {
+        "name": "Warm Sand",
+        "hex": "#F5F0E6",
+        "tailwind": "bg-[#F5F0E6]"
+      },
+      "text": {
+        "primary": "#1A2E26",
+        "secondary": "#4A665A",
+        "muted": "#8C9E96"
+      },
+      "background": {
+        "default": "#FAFAF9",
+        "paper": "#FFFFFF"
+      },
+      "status": {
+        "success": "#10B981",
+        "error": "#EF4444",
+        "warning": "#F59E0B",
+        "info": "#3B82F6"
+      }
+    },
+    "usage_rules": [
+      "Use 'Saathi Sage' for primary actions (Buttons, Active States).",
+      "Use 'Calm Sky' for secondary backgrounds and active tab states.",
+      "Use 'Warm Sand' for section backgrounds to break up white space.",
+      "Text should never be pure black (#000000). Use #1A2E26 for high contrast.",
+      "Avoid harsh gradients. Use solid, soft colors."
+    ]
+  },
+  "layout": {
+    "spacing": {
+      "container_padding": "p-4 md:p-8 lg:p-12",
+      "section_gap": "gap-8 md:gap-16",
+      "element_gap": "gap-4"
+    },
+    "grid_system": {
+      "dashboard": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6",
+      "marketing": "grid grid-cols-1 md:grid-cols-12 gap-8",
+      "cards": "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+    },
+    "border_radius": {
+      "default": "rounded-xl",
+      "large": "rounded-2xl",
+      "button": "rounded-full"
+    },
+    "shadows": {
+      "card": "shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow duration-300",
+      "dropdown": "shadow-lg border border-border/50"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#4A8B71] text-white hover:bg-[#3D745E] rounded-full px-8 py-6 font-semibold shadow-sm transition-all hover:scale-[1.02]",
+      "secondary": "bg-[#E0F2F1] text-[#2C5F4C] hover:bg-[#B2DFDB] rounded-full px-8 py-6 font-medium transition-all",
+      "ghost": "hover:bg-[#F5F0E6] text-[#4A665A] rounded-full px-6 py-4"
+    },
+    "cards": {
+      "style": "bg-white rounded-2xl border border-[#E6E6E6] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.04)]",
+      "hover_effect": "hover:border-[#4A8B71]/30 hover:shadow-md transition-all duration-300"
+    },
+    "inputs": {
+      "style": "rounded-xl border-gray-200 focus:border-[#4A8B71] focus:ring-[#4A8B71]/20 bg-gray-50/50 h-12"
+    },
+    "navigation": {
+      "mobile": "Fixed bottom navigation bar with icons for Home, Chat, Book, Profile.",
+      "desktop": "Top navigation with clear separation between 'Get Help' and 'For Psychologists'."
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_background": {
+        "url": "https://images.unsplash.com/photo-1603276730862-cbf79a742aae?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzV8MHwxfHNlYXJjaHwzfHxjYWxtJTIwbmF0dXJlJTIwbGFuZHNjYXBlJTIwcGVhY2VmdWx8ZW58MHx8fHwxNzcxMTcyNjcyfDA&ixlib=rb-4.1.0&q=85",
+        "alt": "Calm green nature landscape",
+        "usage": "Hero section background with overlay"
+      },
+      "psychologist_portraits": [
+        {
+          "url": "https://images.unsplash.com/photo-1659353888906-adb3e0041693?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjBkb2N0b3IlMjBwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdCUyMGZyaWVuZGx5fGVufDB8fHx8MTc3MTE3MjY3N3ww&ixlib=rb-4.1.0&q=85",
+          "alt": "Female Indian Psychologist",
+          "usage": "Psychologist profile card"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1659353887977-c310d90c751a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHw0fHxpbmRpYW4lMjBkb2N0b3IlMjBwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdCUyMGZyaWVuZGx5fGVufDB8fHx8MTc3MTE3MjY3N3ww&ixlib=rb-4.1.0&q=85",
+          "alt": "Male Indian Psychologist",
+          "usage": "Psychologist profile card"
+        }
+      ],
+      "success_stories": [
+        {
+          "url": "https://images.unsplash.com/photo-1634034339076-88929054d920?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGluZGlhbiUyMGNvdXBsZSUyMHRhbGtpbmclMjBwZWFjZWZ1bHxlbnwwfHx8fDE3NzExNzI2ODF8MA&ixlib=rb-4.1.0&q=85",
+          "alt": "Happy Indian Couple",
+          "usage": "Success story testimonial"
+        }
+      ],
+      "abstract_concepts": {
+        "journey": "https://images.unsplash.com/photo-1636893580433-5ac59809bb13?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzV8MHwxfHNlYXJjaHwxfHxjYWxtJTIwbmF0dXJlJTIwbGFuZHNjYXBlJTIwcGVhY2VmdWx8ZW58MHx8fHwxNzcxMTcyNjcyfDA&ixlib=rb-4.1.0&q=85",
+        "peace": "https://images.unsplash.com/photo-1717964134799-a98f497172a5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzV8MHwxfHNlYXJjaHwyfHxjYWxtJTIwbmF0dXJlJTIwbGFuZHNjYXBlJTIwcGVhY2VmdWx8ZW58MHx8fHwxNzcxMTcyNjcyfDA&ixlib=rb-4.1.0&q=85"
+      }
+    },
+    "icons": {
+      "library": "lucide-react",
+      "style": "Stroke width 1.5px, rounded joins"
+    }
+  },
+  "motion": {
+    "transitions": "transition-all duration-300 ease-in-out",
+    "hover_lift": "hover:-translate-y-1",
+    "fade_in": "animate-in fade-in duration-500 slide-in-from-bottom-4"
+  },
+  "accessibility": {
+    "contrast": "Ensure text is #1A2E26 on light backgrounds.",
+    "focus_states": "focus:ring-2 focus:ring-[#4A8B71] focus:ring-offset-2",
+    "aria_labels": "Required for all icon-only buttons."
+  },
+  "universal_guidelines": [
+    "Mobile-First: Design for small screens first, then scale up.",
+    "Emotional Safety: Avoid red for errors unless critical (use soft orange/amber instead). Use Green for success.",
+    "Data Privacy: Add 'Confidential' badges near chat and booking forms.",
+    "Cultural Context: Use respectful, inclusive language suitable for Indian users.",
+    "Crisis Detection: If user types 'suicide' or 'harm', immediately show the Crisis Banner (Red/White) with helpline numbers.",
+    "No 'Lorem Ipsum': Use realistic placeholder text related to relationships and mental health.",
+    "Use 'sonner' for toast notifications.",
+    "All interactive elements MUST have data-testid attributes."
+  ]
+}
