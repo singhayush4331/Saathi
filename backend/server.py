@@ -418,12 +418,12 @@ If the user expresses suicidal thoughts or self-harm intent, acknowledge their p
     }
 
 @api_router.get("/chat/history/{session_id}")
-async def get_chat_history(session_id: str, request: Request):
+async def get_chat_history(session_id: str, request: Request, limit: int = 50):
     user = await get_authenticator(request)
     messages = await db.chat_messages.find(
         {"session_id": session_id, "user_id": user.user_id},
         {"_id": 0}
-    ).sort("timestamp", 1).to_list(1000)
+    ).sort("timestamp", 1).limit(limit).to_list(limit)
     return messages
 
 @api_router.delete("/chat/history/{session_id}")
