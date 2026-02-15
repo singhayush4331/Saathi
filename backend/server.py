@@ -512,9 +512,12 @@ async def confirm_booking(booking_id: str, payment_id: str, request: Request):
     return {"status": "success", "message": "Booking confirmed"}
 
 @api_router.get("/bookings", response_model=List[Booking])
-async def get_user_bookings(request: Request):
+async def get_user_bookings(request: Request, limit: int = 20):
     user = await get_authenticator(request)
-    bookings = await db.bookings.find({"user_id": user.user_id}, {"_id": 0}).to_list(1000)
+    bookings = await db.bookings.find(
+        {"user_id": user.user_id}, 
+        {"_id": 0}
+    ).sort("created_at", -1).limit(limit).to_list(limit)
     return bookings
 
 @api_router.get("/admin/psychologists")
