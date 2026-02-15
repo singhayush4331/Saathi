@@ -268,7 +268,7 @@ async def anonymous_login(req: AnonymousLogin, response: Response):
         "is_anonymous": True,
         "created_at": datetime.now(timezone.utc).isoformat()
     }
-    await db.users.insert_one(user_data)
+    await db.users.insert_one(user_data.copy())
     
     session_token = f"session_{uuid.uuid4().hex}"
     session_data = {
