@@ -29,6 +29,7 @@ SENDER_EMAIL = os.environ.get('SENDER_EMAIL', 'onboarding@resend.dev')
 RAZORPAY_KEY_ID = os.environ.get('RAZORPAY_KEY_ID')
 RAZORPAY_KEY_SECRET = os.environ.get('RAZORPAY_KEY_SECRET')
 JWT_SECRET = os.environ.get('JWT_SECRET', 'saathi_secret')
+OAUTH_BACKEND_URL = os.environ.get('OAUTH_BACKEND_URL', 'https://demobackend.emergentagent.com')
 
 resend.api_key = RESEND_API_KEY
 razorpay_client = razorpay.Client(auth=(RAZORPAY_KEY_ID, RAZORPAY_KEY_SECRET))
