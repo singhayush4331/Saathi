@@ -319,7 +319,7 @@ async def google_auth_session(request: Request, response: Response):
             "is_anonymous": False,
             "created_at": datetime.now(timezone.utc).isoformat()
         }
-        await db.users.insert_one(user_data)
+        await db.users.insert_one(user_data.copy())
         user_doc = user_data
     
     session_token = data["session_token"]
