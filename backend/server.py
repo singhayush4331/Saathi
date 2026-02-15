@@ -300,7 +300,7 @@ async def google_auth_session(request: Request, response: Response):
     
     import requests
     resp = requests.get(
-        "https://demobackend.emergentagent.com/auth/v1/env/oauth/session-data",
+        f"{OAUTH_BACKEND_URL}/auth/v1/env/oauth/session-data",
         headers={"X-Session-ID": session_id}
     )
     
