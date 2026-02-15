@@ -521,12 +521,12 @@ async def get_user_bookings(request: Request, limit: int = 20):
     return bookings
 
 @api_router.get("/admin/psychologists")
-async def admin_get_psychologists(request: Request):
+async def admin_get_psychologists(request: Request, skip: int = 0, limit: int = 50):
     user = await get_authenticator(request)
     if user.role != "admin":
         raise HTTPException(status_code=403, detail="Admin access required")
     
-    psychologists = await db.psychologists.find({}, {"_id": 0}).to_list(1000)
+    psychologists = await db.psychologists.find({}, {"_id": 0}).skip(skip).limit(limit).to_list(limit)
     return psychologists
 
 @api_router.post("/admin/psychologists/{psychologist_id}/approve")
