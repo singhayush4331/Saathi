@@ -555,8 +555,11 @@ async def create_success_story(req: SuccessStoryCreate, request: Request):
     return SuccessStory(**story_data)
 
 @api_router.get("/stories", response_model=List[SuccessStory])
-async def get_success_stories():
-    stories = await db.success_stories.find({"approved": True}, {"_id": 0}).to_list(1000)
+async def get_success_stories(skip: int = 0, limit: int = 20):
+    stories = await db.success_stories.find(
+        {"approved": True}, 
+        {"_id": 0}
+    ).sort("created_at", -1).skip(skip).limit(limit).to_list(limit)
     return stories
 
 @api_router.post("/admin/stories/{story_id}/approve")
