@@ -445,9 +445,9 @@ async def create_psychologist(req: PsychologistCreate):
     return Psychologist(**psychologist_data)
 
 @api_router.get("/psychologists", response_model=List[Psychologist])
-async def get_psychologists(approved_only: bool = True):
+async def get_psychologists(approved_only: bool = True, skip: int = 0, limit: int = 20):
     filter_query = {"approved": True} if approved_only else {}
-    psychologists = await db.psychologists.find(filter_query, {"_id": 0}).to_list(1000)
+    psychologists = await db.psychologists.find(filter_query, {"_id": 0}).skip(skip).limit(limit).to_list(limit)
     return psychologists
 
 @api_router.get("/psychologists/{psychologist_id}", response_model=Psychologist)
